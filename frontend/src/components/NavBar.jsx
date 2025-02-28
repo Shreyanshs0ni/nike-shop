@@ -5,11 +5,14 @@ const NavBar = () => {
   const [visible, setVisible] = useState(false);
   return (
     <div className="flex items-center justify-between py-5 font-medium">
-      <img
-        src={assets.logo}
-        className="w-36 brightness-0 contrast-200"
-        alt="logo"
-      />
+      <Link to="/">
+        {" "}
+        <img
+          src={assets.logo}
+          className="w-36 brightness-0 contrast-200"
+          alt="logo"
+        />
+      </Link>
 
       <ul className="hidden gap-5 text-sm text-gray-700 sm:flex">
         <NavLink to="/" className="flex flex-col items-center gap-1">
@@ -85,31 +88,31 @@ const NavBar = () => {
           </div>
           <NavLink
             onClick={() => setVisible(false)}
-            className="my-4 rounded-lg border-b-2 border-gray-400 py-2 pl-6 text-center transition-all hover:bg-gray-900"
+            className="my-4 rounded-lg py-2 pl-6 text-center text-gray-300 transition-all hover:bg-gray-900"
             to="/"
           >
-            <p className="text-gray-300">HOME</p>
+            <p className="">HOME</p>
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="my-4 rounded-lg border-b-2 border-gray-400 py-2 pl-6 text-center transition-all hover:bg-gray-900"
+            className="my-4 rounded-lg py-2 pl-6 text-center transition-all hover:bg-gray-900"
             to="/collection"
           >
-            <p className="text-gray-300">COLLECTION</p>
+            <p className="">COLLECTION</p>
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="my-4 rounded-lg border-b-2 border-gray-400 py-2 pl-6 text-center transition-all hover:bg-gray-900"
+            className="my-4 rounded-lg py-2 pl-6 text-center transition-all hover:bg-gray-900"
             to="/about"
           >
-            <p className="text-gray-300">ABOUT</p>
+            <p className="">ABOUT</p>
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}
-            className="my-4 rounded-lg border-b-2 border-gray-400 py-2 pl-6 text-center transition-all hover:bg-gray-900"
+            className="my-4 rounded-lg py-2 pl-6 text-center transition-all hover:bg-gray-900"
             to="/contact"
           >
-            <p className="text-gray-300">CONTACT</p>
+            <p className="">CONTACT</p>
           </NavLink>
         </div>
       </div>
