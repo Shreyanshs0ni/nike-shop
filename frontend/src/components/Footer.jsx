@@ -9,8 +9,7 @@ const Footer = () => {
           <p className="w-full text-xs text-gray-600 md:w-2/3">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
             temporibus est esse dolorum officiis deserunt quia voluptatem ex
-            nesciunt inventore? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Tempora, ut.
+            nesciunt inventore?
           </p>
         </div>
         <div>
