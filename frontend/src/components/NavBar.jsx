@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { assets } from "../assets/assets";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { ShopContext } from "../context/ShopContext";
 const NavBar = () => {
+  const { setShowSearch } = useContext(ShopContext);
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+  const isCollectionRoute = location.pathname.includes("collection");
+  const handleSearchIconClick = () => {
+    if (isCollectionRoute) {
+      setShowSearch(true);
+    }
+  };
+
   return (
     <div className="flex items-center justify-between py-5 font-medium">
       <Link to="/">
@@ -37,6 +47,7 @@ const NavBar = () => {
           src={assets.search_icon}
           className="w-8 cursor-pointer brightness-0 contrast-200"
           alt="search"
+          onClick={handleSearchIconClick}
         />
         <div className="group relative">
           <img
