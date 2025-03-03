@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 const NavBar = () => {
-  const { setShowSearch } = useContext(ShopContext);
+  const { setShowSearch, getCartCount } = useContext(ShopContext);
   const [visible, setVisible] = useState(false);
   const location = useLocation();
   const isCollectionRoute = location.pathname.includes("collection");
@@ -70,7 +70,7 @@ const NavBar = () => {
             className="min-w-8s w-8 brightness-0 contrast-200"
           />
           <p className="absolute right-[-1px] bottom-[-1px] aspect-square w-4 rounded-full bg-black text-center text-[8px] leading-4 text-white">
-            10
+            {getCartCount()}
           </p>
         </Link>
         <img
