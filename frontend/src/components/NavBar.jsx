@@ -49,16 +49,23 @@ const NavBar = () => {
           alt="search"
           onClick={handleSearchIconClick}
         />
+
         <div className="group relative">
-          <img
-            className="w-5 cursor-pointer brightness-0 contrast-200"
-            src={assets.profile_icon}
-            alt="profile"
-          />
+          <Link to="/login">
+            <img
+              className="w-5 cursor-pointer brightness-0 contrast-200"
+              src={assets.profile_icon}
+              alt="profile"
+            />{" "}
+          </Link>
           <div className="dropdown-menu absolute right-0 hidden pt-4 group-hover:block">
             <div className="flex w-36 flex-col gap-2 bg-black px-5 py-3 text-gray-300">
               <p className="cursor-pointer hover:text-white">My Profile</p>
-              <p className="cursor-pointer hover:text-white">Orders</p>
+              <Link to="/orders">
+                <p className="cursor-pointer text-gray-300 hover:text-white">
+                  Orders
+                </p>
+              </Link>
               <p className="cursor-pointer hover:text-white">Logout</p>
             </div>
           </div>
