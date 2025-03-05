@@ -2,8 +2,15 @@ import React, { useState } from "react";
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Sign up");
+
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
+  };
   return (
-    <form className="m-auto mt-14 flex w-[90%] flex-col items-center gap-4 text-gray-800 sm:max-w-96">
+    <form
+      onSubmit={onSubmitHandler}
+      className="m-auto mt-14 flex w-[90%] flex-col items-center gap-4 text-gray-800 sm:max-w-96"
+    >
       <div className="mt-10 mb-2 inline-flex items-center gap-2">
         <p className="league-script-regular text-5xl"> {currentState}</p>
       </div>
@@ -49,7 +56,7 @@ const Login = () => {
           </p>
         )}
       </div>
-      <button className="mt-4 cursor-pointer bg-black px-12 py-2 font-light text-white shadow-green-300 transition-shadow duration-300 hover:shadow-[-3px_5px_1px]">
+      <button className="mt-4 cursor-pointer border border-gray-600 bg-white px-12 py-2 font-light text-black shadow-gray-800 transition-shadow duration-300 hover:shadow-[-3px_5px_1px]">
         {currentState === "Login" ? "Sign In" : "Sign Up"}
       </button>
     </form>

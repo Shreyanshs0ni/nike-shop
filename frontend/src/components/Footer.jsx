@@ -7,9 +7,7 @@ const Footer = () => {
         <div>
           <img src={assets.logo} className="mb-5 w-28" alt="logo" />
           <p className="w-full text-xs text-gray-600 md:w-2/3">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-            temporibus est esse dolorum officiis deserunt quia voluptatem ex
-            nesciunt inventore?
+            Beaverton, One Bowerman Dr, United States
           </p>
         </div>
         <div>
