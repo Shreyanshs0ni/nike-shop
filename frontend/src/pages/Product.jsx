@@ -78,7 +78,7 @@ const Product = () => {
             </div>
           </div>
           <button
-            className="bg-black px-8 py-3 text-sm text-white active:bg-gray-700"
+            className="border border-gray-600 px-8 py-3 text-sm shadow-gray-800 transition-shadow duration-300 hover:shadow-[-3px_5px_1px]"
             onClick={() => addToCart(productData._id, size)}
           >
             Add to Cart

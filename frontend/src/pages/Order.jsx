@@ -41,7 +41,7 @@ const Order = () => {
                 <p className="h-2 min-w-2 rounded-full bg-green-500"></p>
                 <p className="text-sm md:text-base">Ready to ship </p>
               </div>
-              <button className="cursor-pointer rounded-sm border border-gray-300 px-4 py-2 text-sm font-medium shadow-xs transition-colors duration-300 hover:bg-gray-800 hover:text-gray-200">
+              <button className="cursor-pointer rounded-sm border border-gray-300 px-4 py-2 text-sm font-medium shadow-gray-800 transition-shadow duration-300 hover:shadow-[-3px_5px_1px]">
                 Track Order
               </button>
             </div>

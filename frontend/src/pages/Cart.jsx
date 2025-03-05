@@ -89,7 +89,7 @@ const Cart = () => {
           <CartTotal />
           <div className="w-full text-end">
             <button
-              className="my-8 bg-black px-8 py-3 text-sm text-white"
+              className="my-8 border border-gray-600 px-8 py-3 text-sm shadow-gray-800 transition-shadow duration-300 hover:shadow-[-3px_5px_1px]"
               onClick={() => navigate("/place-order")}
             >
               PROCEED TO CHECKOUT
