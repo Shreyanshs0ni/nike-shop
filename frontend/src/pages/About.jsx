@@ -14,7 +14,7 @@ const About = () => {
         />
 
         <div className="flex flex-col justify-center gap-6 text-gray-600 md:w-2/4">
-          <div className="pt-2 text-2xl">
+          <div className="pt-2 text-4xl">
             <Title text1={"ABOUT"} text2={"US"} />
           </div>
           <p>
@@ -38,7 +38,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="py-4 text-xl">
+      <div className="py-4 text-2xl">
         <Title text1={"WHY"} text2={"CHOOSEUS"} />
       </div>
       <div className="mb-20 flex flex-col text-sm md:flex-row">
