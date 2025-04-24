@@ -117,7 +117,7 @@ const PlaceOrder = () => {
           </div>
           <div className="mt-8 w-full text-end">
             <button
-              className="my-8 bg-black px-16 py-3 text-sm text-white"
+              className="cursor-pointer border border-gray-300 px-12 py-4 text-sm font-medium shadow-gray-800 transition-shadow duration-300 hover:shadow-[-3px_5px_1px]"
               onClick={() => navigate("/orders")}
             >
               PLACE ORDER
