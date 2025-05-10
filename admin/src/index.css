@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=League+Script&display=swap");
+
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit", serif;
+}
+
+.active {
+  background-color: #ffd6a8;
+  border-color: rgb(69, 69, 69);
+}
+
+.league-script-regular {
+  font-family: "League Script", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+select,
+input,
+textarea {
+  border: 1px solid #c2c2c2;
+  outline-color: #ffd6a8;
+  border-radius: 4px;
+}
