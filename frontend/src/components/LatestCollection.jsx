@@ -9,11 +9,10 @@ const LatestCollection = () => {
 
   useEffect(() => {
     setLatestProducts(products.slice(0, 10));
-  }, []);
+  }, [products]);
   return (
     <div className="my-10">
-          <div className="py-8 text-center text-2xl">
-              
+      <div className="py-8 text-center text-2xl">
         <Title text1={"NEW&"} text2={"FEATURED"} />
         <p className="m-auto w-3/4 text-xs text-gray-600 sm:text-sm md:text-base">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente,

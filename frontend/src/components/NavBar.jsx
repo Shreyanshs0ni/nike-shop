@@ -3,7 +3,14 @@ import { assets } from "../assets/assets";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 const NavBar = () => {
-  const { setShowSearch, getCartCount } = useContext(ShopContext);
+  const {
+    setShowSearch,
+    getCartCount,
+    navigate,
+    token,
+    setToken,
+    setCartItems,
+  } = useContext(ShopContext);
   const [visible, setVisible] = useState(false);
   const location = useLocation();
   const isCollectionRoute = location.pathname.includes("collection");
@@ -11,6 +18,12 @@ const NavBar = () => {
     if (isCollectionRoute) {
       setShowSearch(true);
     }
+  };
+  const logout = () => {
+    navigate("/login");
+    localStorage.removeItem("token");
+    setToken("");
+    setCartItems({});
   };
 
   return (
@@ -66,7 +79,9 @@ const NavBar = () => {
                   Orders
                 </p>
               </Link>
-              <p className="cursor-pointer hover:text-white">Logout</p>
+              <p onClick={logout} className="cursor-pointer hover:text-white">
+                Logout
+              </p>
             </div>
           </div>
         </div>
