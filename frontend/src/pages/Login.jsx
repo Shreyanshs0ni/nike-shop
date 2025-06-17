@@ -1,11 +1,52 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ShopContext } from "../context/ShopContext";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Login = () => {
-  const [currentState, setCurrentState] = useState("Sign up");
-
+  const [currentState, setCurrentState] = useState("Sign Up");
+  const { token, setToken, navigate, backendUrl } = useContext(ShopContext);
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const onSubmitHandler = async (event) => {
     event.preventDefault();
+    try {
+      if (currentState === "Sign Up") {
+        const response = await axios.post(backendUrl + "/api/user/register", {
+          name,
+          email,
+          password,
+        });
+        if (response.data.success) {
+          setToken(response.data.token);
+          localStorage.setItem("token", response.data.token);
+        } else {
+          toast.error(response.data.message);
+        }
+      } else {
+        const response = await axios.post(backendUrl + "/api/user/login", {
+          email,
+          password,
+        });
+        if (response.data.success) {
+          setToken(response.data.token);
+          localStorage.setItem("token", response.data.token);
+        } else {
+          toast.error(response.data.message);
+        }
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+    }
   };
+  useEffect(() => {
+    if (token) {
+      navigate("/");
+    }
+  }, [token]);
+
   return (
     <form
       onSubmit={onSubmitHandler}
@@ -18,6 +59,8 @@ const Login = () => {
         ""
       ) : (
         <input
+          onChange={(e) => setName(e.target.value)}
+          value={name}
           type="text"
           className="w-full border border-gray-600 px-3 py-2"
           placeholder="Name"
@@ -28,12 +71,16 @@ const Login = () => {
         type="email"
         className="w-full border border-gray-600 px-3 py-2"
         placeholder="Email"
+        onChange={(e) => setEmail(e.target.value)}
+        value={email}
         required
       />
       <input
         type="password"
         className="w-full border border-gray-600 px-3 py-2"
         placeholder="Password"
+        onChange={(e) => setPassword(e.target.value)}
+        value={password}
         required
       />
       <div className="mt-[-8px] flex w-full justify-between text-sm">
