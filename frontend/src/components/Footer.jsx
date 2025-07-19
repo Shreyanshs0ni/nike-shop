@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="text-gray-500">
         <hr />{" "}
         <p className="py-5 text-center text-sm">
-          © 2025 Nike, Inc. All rights reserved
+          © 2025 nike, Inc. All rights reserved
         </p>
       </div>
     </div>
