@@ -10,7 +10,7 @@ const NewsLetterBox = () => {
         ITS BETTER AS A MEMBER
       </p>
       <p className="mt-3 text-gray-400">
-        Move, Shop, Customize and Celebrate with the best of nike.
+        Move, Shop, Customize and Celebrate with the best of Nike.
       </p>
       <form
         onSubmit={onSubmitHandler}
