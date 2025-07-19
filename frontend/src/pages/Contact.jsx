@@ -22,7 +22,7 @@ const Contact = () => {
             One Bowerman Dr, United States
           </p>
           <p className="text-gray-500">
-            Tel: 1-800-806-6453 <br /> Email: nike.help@gmail.com
+            Tel: 1-800-806-6453 <br /> Email: Nike.help@gmail.com
           </p>
           <p className="text-xl font-semibold text-gray-600">Careers at nike</p>
           <p className="text-gray-500">WHAT MOVES YOU MOVES OUR WORLD</p>

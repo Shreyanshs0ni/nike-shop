@@ -23,14 +23,14 @@ const Footer = () => {
           <p className="mb-5 text-xl font-medium">GET IN TOUCH</p>
           <ul className="flex flex-col gap-1 text-gray-600">
             <li>1-800-806-6453</li>
-            <li>nike.help@gmail.com</li>
+            <li>Nike.help@gmail.com</li>
           </ul>
         </div>
       </div>
       <div className="text-gray-500">
         <hr />{" "}
         <p className="py-5 text-center text-sm">
-          © 2025 nike, Inc. All rights reserved
+          © 2025 Nike, Inc. All rights reserved
         </p>
       </div>
     </div>

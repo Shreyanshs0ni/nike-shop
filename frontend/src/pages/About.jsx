@@ -18,7 +18,7 @@ const About = () => {
             <Title text1={"ABOUT"} text2={"US"} />
           </div>
           <p>
-            nike, Inc. is a team comprised of the nike, Jordan and Converse
+            Nike, Inc. is a team comprised of the nike, Jordan and Converse
             brands driven by a shared purpose to leave an enduring impact.
           </p>
           <p>
@@ -45,7 +45,7 @@ const About = () => {
         <div className="flex w-1/3 flex-col gap-5 border border-gray-400 px-10 py-8 sm:py-20 md:px-16">
           <b className="text-center text-4xl font-bold">43%</b>
           <p className="text-center text-lg text-gray-600">
-            of nike’s leadership positions are held by women.
+            of Nike’s leadership positions are held by women.
           </p>
         </div>
         <div className="flex w-1/3 flex-col gap-5 border border-gray-400 px-10 py-8 sm:py-20 md:px-16">
@@ -58,7 +58,7 @@ const About = () => {
         <div className="flex w-1/3 flex-col gap-5 border border-gray-400 px-10 py-8 sm:py-20 md:px-16">
           <b className="text-center text-4xl font-bold">$97.7M</b>
           <p className="text-center text-lg text-gray-600">
-            invested in nike, Inc.'s fiscal year 2021 to drive positive impact
+            invested in Nike, Inc.'s fiscal year 2021 to drive positive impact
             in communities around the world.
           </p>
         </div>
