@@ -20,7 +20,6 @@ orderRouter.post("/status", adminAuth, updateStatus);
 //Payment Features
 orderRouter.post("/place", authUser, placeOrder);
 orderRouter.post("/stripe", authUser, placeOrderStrip);
-orderRouter.post("/razorpay", authUser, placeOrderRazorPay);
 
 //User Feature
 orderRouter.post("/user-orders", authUser, userOrders);
