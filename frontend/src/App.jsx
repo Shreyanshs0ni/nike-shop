@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import SearchBar from "./components/SearchBar";
 import { useContext, useEffect } from "react";
 import { ShopContext } from "./context/ShopContext";
+import Verify from "./pages/Verify";
 const App = () => {
   const { pathname } = useLocation();
   const { showSearch, setShowSearch, setSearch } = useContext(ShopContext);
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/place-order" element={<PlaceOrder />} />
         <Route path="/orders" element={<Order />} />
+        <Route path="/verify" element={<Verify />} />
       </Routes>
       <Footer />
     </div>

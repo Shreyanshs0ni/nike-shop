@@ -41,7 +41,6 @@ const addProduct = async (req, res) => {
       image: imagesURL,
       date: Date.now(),
     };
-    console.log(productData);
     const product = new productModel(productData);
     await product.save();
 
@@ -57,7 +56,6 @@ const addProduct = async (req, res) => {
 const listProducts = async (req, res) => {
   try {
     const products = await productModel.find({});
-    console.log("product:", products);
     res.json({ success: true, products });
   } catch (error) {
     console.log(error);
