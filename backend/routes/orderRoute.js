@@ -2,7 +2,6 @@ import express from "express";
 import {
   placeOrder,
   placeOrderStrip,
-  placeOrderRazorPay,
   allOrders,
   userOrders,
   updateStatus,

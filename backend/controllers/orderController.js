@@ -149,7 +149,6 @@ const updateStatus = async (req, res) => {
 export {
   placeOrder,
   placeOrderStrip,
-  placeOrderRazorPay,
   allOrders,
   userOrders,
   updateStatus,
